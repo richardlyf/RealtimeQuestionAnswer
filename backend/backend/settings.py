@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rtqa' #WE CHANGED THIS
+    'rtqa', #WE CHANGED THIS
+    'corsheaders', #WE CHANGED THIS
+    'rest_framework'  #WE CHANGED THIS
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  #WE CHANGED THIS
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,3 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#WE CHANGED THIS
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000/'
+)
