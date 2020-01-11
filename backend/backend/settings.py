@@ -125,6 +125,6 @@ STATIC_URL = '/static/'
 
 
 #WE CHANGED THIS
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000/'
-)
+CORS_ORIGIN_WHITELIST = [
+    'https://localhost:3000'
+]
